@@ -1,0 +1,145 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700&subset=latin,greek);
+
+* {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+html {
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    background-image: url('../images/FondoMadera.jpg');
+    /*    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;*/
+}
+
+header {
+    position: page;
+    margin-bottom: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: white;
+    box-shadow: inset 0 -1px 0 0 green;
+}
+
+    header h1 {
+        position: center;
+        margin-left: 40%;
+    }
+
+#imagenFondoDes {
+    position: fixed;
+    right: 95%;
+    width: 30px;
+}
+
+#imagenFondoIz {
+    position: fixed;
+    left: 90%;
+    width: 30px;
+}
+
+#imgAside {
+    width: 150px;
+    left: 80%;
+    top: 30%;
+}
+
+#lblIn {
+    font: bold 25px arial;
+}
+
+#lblNom {
+    font: bold 25px arial;
+}
+
+#listIn {
+    background-color: dimgray;
+    color: dimgray;
+}
+
+#listNom {
+    background-color: burlywood;
+    color: burlywood;
+}
+
+footer {
+    position: page;
+    margin-top: 23%;
+    margin-bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: orangered;
+}
+
+@media screen and (max-with:980px) {
+    section {
+        width: 98%;
+    }
+
+    footer {
+        width: 68%;
+    }
+}
+
+#botonesMos {
+    position: fixed;
+    left: 40%;
+    top: 40%;
+    /*bottom: 30%;*/
+}
+
+#botonesFull {
+    position: fixed;
+    top: 40%;
+}
+
+#btnAlimentos {
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 30px 20px;
+    width: 160px;
+    font-weight: bold;
+}
+
+#btnBebidas {
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 30px 20px;
+    width: 160px;
+    font-weight: bold;
+}
+
+#h2 {
+    position: fixed;
+    left: 40%;
+    top: 10%;
+    color: slategray;
+    font-weight: bold;
+}
+
+#listGrupo {
+    position: fixed;
+    left: 30%;
+    top: 40%;
+}
+
+#lisSubGr {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    width: 113px;
+}
+
+/*#Producto {
+    position: fixed;
+    left: 40%;
+    top: 10%;
+}*/
+

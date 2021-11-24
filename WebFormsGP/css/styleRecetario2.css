@@ -1,0 +1,173 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700&subset=latin,greek);
+
+* {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+html {
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    background-image: url('../images/FondoMadera.jpg');
+    /*    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;*/
+}
+
+header {
+    position: page;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: white;
+    box-shadow: inset 0 -1px 0 0 green;
+}
+
+#tit1 {
+    position: center;
+    margin-left: 200px;
+}
+
+
+#btnPasar {
+    position: center;
+    top: 40px;
+    margin-bottom: 30px;
+    left: 0px;
+}
+
+#imagenFondoDes {
+    position: absolute;
+    right: 87%;
+    width: 61px;
+    top: -4px;
+}
+
+#imagenFondoIz {
+    position: absolute;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    left: 89%;
+    width: 56px;
+    top: 51px;
+    height: 45px;
+}
+
+#imgAside {
+    width: 150px;
+    left: 80%;
+    top: 30%;
+}
+
+#lblIn {
+    font: bold 25px arial;
+}
+
+#lblNom {
+    font: bold 25px arial;
+}
+
+#listIn {
+    background-color: dimgray;
+    color: dimgray;
+}
+
+#listNom {
+    background-color: burlywood;
+    color: burlywood;
+}
+
+footer {
+    position: page;
+    margin-top: 30px;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: orangered;
+}
+
+@media screen and (max-with:980px) {
+    section {
+        width: 98%;
+    }
+
+    footer {
+        width: 68%;
+    }
+}
+
+#botonesMos {
+    position: fixed;
+    left: 40%;
+    top: 40%;
+    /*bottom: 30%;*/
+}
+
+#botonesFull {
+    position: fixed;
+    top: 40%;
+}
+
+#btnAlimentos {
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 30px 20px;
+    width: 160px;
+    font-weight: bold;
+}
+
+#btnBebidas {
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 30px 20px;
+    width: 160px;
+    font-weight: bold;
+}
+
+#Checar {
+    position: center;
+    top: 20px;
+    font-weight: bold;
+}
+
+#parra {
+    position: page;
+    top: 20%;
+    right: 5%;
+    bottom: 20%;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#h2 {
+    position: fixed;
+    top: 10%;
+    bottom: 30%;
+    color: slategray;
+    font-weight: bold;
+    text-align: center;
+}
+
+#listGrupo {
+    position: fixed;
+    left: 30%;
+    top: 40%;
+}
+
+#lisSubGr {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    width: 113px;
+}
+
+/*#Producto {
+    position: fixed;
+    left: 40%;
+    top: 10%;
+}*/
+

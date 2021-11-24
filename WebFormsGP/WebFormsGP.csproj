@@ -1,0 +1,280 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B318FCC-29F8-462F-9F4E-307E2E87C5B4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebFormsGP</RootNamespace>
+    <AssemblyName>WebFormsGP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClassEntidadesGP">
+      <HintPath>..\ClassEntidadesGP\bin\Debug\ClassEntidadesGP.dll</HintPath>
+    </Reference>
+    <Reference Include="EASendMail, Version=7.8.0.1, Culture=neutral, PublicKeyToken=88adb80ecd66540b, processorArchitecture=MSIL">
+      <HintPath>..\packages\EASendMail.7.8.0.1\lib\net45\EASendMail.dll</HintPath>
+    </Reference>
+    <Reference Include="LibreriaParaSweet">
+      <HintPath>..\..\Aplicaciones WEB 5°\LibreriaParaSweet\LibreriaParaSweet\bin\Debug\LibreriaParaSweet.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicaNegociosGP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LogicaNegociosGP\bin\Debug\LogicaNegociosGP.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Avisos.aspx" />
+    <Content Include="Avisos2.aspx" />
+    <Content Include="Avisos3.aspx" />
+    <Content Include="bootstrap-4.5.0-dist\css\all.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\animate.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\baguetteBox.min.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\bootsnav.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\bootstrap-select.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\carousel-ticker.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\code_animate.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\custom.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\jquery-ui.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\owl.carousel.min.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\responsive.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\style.css" />
+    <Content Include="bootstrap-4.5.0-dist\css\superslides.css" />
+    <Content Include="bootstrap-4.5.0-dist\js\baguetteBox.min.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\bootsnav.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\bootstrap-select.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\bootstrap.min.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\contact-form-script.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\custom.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\form-validator.min.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\images-loded.min.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\inewsticker.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\isotope.min.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\jquery-3.2.1.min.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\jquery-ui.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\jquery.nicescroll.min.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\jquery.superslides.min.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\owl.carousel.min.js" />
+    <Content Include="bootstrap-4.5.0-dist\js\popper.min.js" />
+    <Content Include="css\StilosMenu.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\styleReceta.css" />
+    <Content Include="css\styleRecetario.css" />
+    <Content Include="css\styleRecetario2.css" />
+    <Content Include="css\styleRecuperar.css" />
+    <Content Include="css\styleRegistro.css" />
+    <Content Include="HomeRestaurant.aspx" />
+    <Content Include="images\capacitacion1.png" />
+    <Content Include="images\capacitacion2.png" />
+    <Content Include="images\fondo login.png" />
+    <Content Include="images\FondoAzul.jpg" />
+    <Content Include="images\FondoMadera.jpg" />
+    <Content Include="images\ImagenRecetas.jpeg" />
+    <Content Include="images\inicio-img.png" />
+    <Content Include="images\logo-img.png" />
+    <Content Include="images\nosotros-img.jpg" />
+    <Content Include="images\nosotross-frame-img.png" />
+    <Content Include="images\recetarios1.png" />
+    <Content Include="images\recetarios1blanco.png" />
+    <Content Include="images\recetarios2.jpg" />
+    <Content Include="images\recetarios3.png" />
+    <Content Include="images\recetarios3blanco.png" />
+    <Content Include="images\recetarios4.png" />
+    <Content Include="images\recetarios4blanco.png" />
+    <Content Include="IndexRecetario.aspx" />
+    <Content Include="js\JavaScript2.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\script.js" />
+    <Content Include="Recetario.aspx" />
+    <Content Include="Recetario2.aspx" />
+    <Content Include="Recetario3.aspx" />
+    <Content Include="RecuperarContra.aspx" />
+    <Content Include="Registro.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Avisos.aspx.cs">
+      <DependentUpon>Avisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Avisos.aspx.designer.cs">
+      <DependentUpon>Avisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Avisos2.aspx.cs">
+      <DependentUpon>Avisos2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Avisos2.aspx.designer.cs">
+      <DependentUpon>Avisos2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Avisos3.aspx.cs">
+      <DependentUpon>Avisos3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Avisos3.aspx.designer.cs">
+      <DependentUpon>Avisos3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeRestaurant.aspx.cs">
+      <DependentUpon>HomeRestaurant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeRestaurant.aspx.designer.cs">
+      <DependentUpon>HomeRestaurant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexRecetario.aspx.cs">
+      <DependentUpon>IndexRecetario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexRecetario.aspx.designer.cs">
+      <DependentUpon>IndexRecetario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recetario.aspx.cs">
+      <DependentUpon>Recetario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recetario.aspx.designer.cs">
+      <DependentUpon>Recetario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recetario2.aspx.cs">
+      <DependentUpon>Recetario2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recetario2.aspx.designer.cs">
+      <DependentUpon>Recetario2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recetario3.aspx.cs">
+      <DependentUpon>Recetario3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recetario3.aspx.designer.cs">
+      <DependentUpon>Recetario3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperarContra.aspx.cs">
+      <DependentUpon>RecuperarContra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarContra.aspx.designer.cs">
+      <DependentUpon>RecuperarContra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\recetarios3.zip" />
+    <Content Include="bootstrap-4.5.0-dist\css\bootstrap-grid.css.map" />
+    <Content Include="bootstrap-4.5.0-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="bootstrap-4.5.0-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="bootstrap-4.5.0-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bootstrap-4.5.0-dist\css\bootstrap.css.map" />
+    <Content Include="bootstrap-4.5.0-dist\css\bootstrap.min.css.map" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52009</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52009/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
