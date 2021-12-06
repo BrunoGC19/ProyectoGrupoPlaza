@@ -41,6 +41,7 @@
       <HintPath>..\..\Aplicaciones WEB 5°\LibreriaParaSweet\LibreriaParaSweet\bin\Debug\LibreriaParaSweet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,7 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogicaFachada.cs" />
     <Compile Include="LogicaNegocioClasi.cs" />
+    <Compile Include="LogicaNegocioComentario.cs" />
     <Compile Include="LogicaNegocioGrupo.cs" />
     <Compile Include="LogicaNegocioMarca.cs" />
     <Compile Include="LogicaNegocioProducto.cs" />

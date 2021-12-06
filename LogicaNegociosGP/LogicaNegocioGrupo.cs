@@ -18,6 +18,10 @@ namespace LogicaNegociosGP
         {
             operaciones = new AccesoSQL(cadconex);
         }
+        public LogicaNegocioGrupo()
+        {
+         
+        }
 
         public List<EntidadGrupo> informacionGrupo(ref string mensaje)
         {

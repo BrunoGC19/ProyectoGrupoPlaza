@@ -28,3 +28,5 @@ C:\Users\IanSaid\Documents\DocDalila\ProyectoGrupoPlaza\ClassEntidadesGP\obj\Deb
 C:\Users\IanSaid\Documents\DocDalila\ProyectoGrupoPlaza\ClassEntidadesGP\obj\Debug\ClassEntidadesGP.csproj.CopyComplete
 C:\Users\IanSaid\Documents\DocDalila\ProyectoGrupoPlaza\ClassEntidadesGP\obj\Debug\ClassEntidadesGP.dll
 C:\Users\IanSaid\Documents\DocDalila\ProyectoGrupoPlaza\ClassEntidadesGP\obj\Debug\ClassEntidadesGP.pdb
+C:\Users\brein\Desktop\PROJ\ProyectoGrupoPlaza\ClassEntidadesGP\bin\Debug\EASendMail.dll
+C:\Users\brein\Desktop\PROJ\ProyectoGrupoPlaza\ClassEntidadesGP\obj\Debug\ClassEntidadesGP.csproj.CopyComplete

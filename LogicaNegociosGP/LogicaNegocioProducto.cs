@@ -18,6 +18,10 @@ namespace LogicaNegociosGP
         {
             operaciones = new AccesoSQL(cadconex);
         }
+        public LogicaNegocioProducto()
+        {
+          
+        }
 
         public DataTable obtenerTodosProductos(ref string m, ref string cons)
         {

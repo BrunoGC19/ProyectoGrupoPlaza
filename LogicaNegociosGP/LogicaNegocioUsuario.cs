@@ -20,7 +20,10 @@ namespace LogicaNegociosGP
         {
             operaciones = new AccesoSQL(cadconex);
         }
-      
+        public LogicaNegocioUsuario()
+        {
+        }
+
         //public string ComparaNombre(string name)
         //{
         //    string consulta = "select ContraseñaIncrip from Usuario where NombreUsr= '" + name + "'";
@@ -41,14 +44,12 @@ namespace LogicaNegociosGP
         //    return contraseñaEncript;
         //}
 
-
-
-        public List<EntidadUsuario> informacionUsuario(ref string mensaje, ref string usr, ref string cont)
+        public EntidadUsuario informacionUsuario(ref string mensaje, ref string usr, ref string cont)
         {
-            string consulta = "select idUser, NombreUsr, Contraseña from Usuario where NombreUsr= '"+usr+"' and Contraseña = '"+cont+"'";
+            string consulta = "select idUser, NombreUsr, Contraseña, idPuesto from Usuario where NombreUsr= '" + usr + "' and Contraseña = '" + cont + "'";
             SqlDataReader contenedor = null;
             SqlConnection cntemp = null;
-            List<EntidadUsuario> misobj = new List<EntidadUsuario>();
+            EntidadUsuario misobj = new EntidadUsuario();
 
             cntemp = operaciones.AbrirConexion(ref mensaje);
             contenedor = operaciones.ConsultaReader(consulta, cntemp, ref mensaje);
@@ -57,18 +58,17 @@ namespace LogicaNegociosGP
             {
                 while (contenedor.Read())
                 {
-                    misobj.Add(
-                        new EntidadUsuario
-                        {
-                            idUser = (int)contenedor[0],
-                            NombreUsr = (string)contenedor[1],
-                            Contraseña = (string)contenedor[2]
-                        }
-                        );
+
+                    misobj.idUser = (int)contenedor[0];
+                    misobj.NombreUsr = (string)contenedor[1];
+                    misobj.Contraseña = (string)contenedor[2];
+                    misobj.idPuesto = (int)contenedor[3];
+
                 }
             }
             return misobj;
         }
+
         public EntidadUsuario informacionContraseña(ref string mensaje, ref string name)
         {
             string consulta = "select ContraseñaIncrip from Usuario where NombreUsr= '" + name + "'";

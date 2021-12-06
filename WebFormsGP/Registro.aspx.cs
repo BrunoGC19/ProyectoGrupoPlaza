@@ -14,33 +14,15 @@ namespace WebFormsGP
 {
     public partial class Registro : System.Web.UI.Page
     {
-        LogicaNegocioMarca logMarc = null;
-        LogicaNegocioPuesto logPues = null;
-        LogicaNegocioUsuario logUsu = null;
+        LogicaFachada logicaFachada = new LogicaFachada();
         protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
-                logMarc = new LogicaNegocioMarca(ConfigurationManager.ConnectionStrings["cnlocal1"].ConnectionString);
-                logPues = new LogicaNegocioPuesto(ConfigurationManager.ConnectionStrings["cnlocal1"].ConnectionString);
-                logUsu = new LogicaNegocioUsuario(ConfigurationManager.ConnectionStrings["cnlocal1"].ConnectionString);
-
-                Session["logMar"] = logMarc;
-                Session["logPue"] = logPues;
-                Session["logUsur"] = logUsu;
-            }
-            else
-            {
-                logMarc = (LogicaNegocioMarca)Session["logMar"];
-                logPues = (LogicaNegocioPuesto)Session["logPue"];
-                logUsu = (LogicaNegocioUsuario)Session["logUsur"];
-            }
+        {            
 
             List<EntidadMarca> listaMarca = null;
             string h = "";
             if(!Page.IsPostBack)
             {
-                listaMarca = logMarc.informacionMarcas(ref h);
+                listaMarca = logicaFachada.informacionMarcas(ref h);
                 ddlMarca.Items.Clear();
 
                 for (int q = 0; q < listaMarca.Count; q++)
@@ -52,7 +34,7 @@ namespace WebFormsGP
             List<EntidadPuesto> listaPuesto = null;
             if(!Page.IsPostBack)
             {
-                listaPuesto = logPues.informacionPuesto(ref h);
+                listaPuesto = logicaFachada.informacionPuesto(ref h);
                 ddlPuesto.Items.Clear();
 
                 for (int i = 0; i < listaPuesto.Count; i++)
@@ -64,23 +46,30 @@ namespace WebFormsGP
 
         protected void btnRegistro_Click(object sender, EventArgs e)
         {
-            string mensaje = txtPaswr.Text;
-            int clave = Convert.ToInt32(txtClave.Text);
-            string incrip = incriptarMensaje(mensaje, clave);
+            if (string.IsNullOrEmpty(txtUsr.Text) || string.IsNullOrEmpty(txtPaswr.Text) || string.IsNullOrEmpty(txtClave.Text))
+            {
+                MessageBox.Show("Ingresa todos los datos que se piden");
+            }
+            else
+            {
+                string mensaje = txtPaswr.Text;
+                int clave = Convert.ToInt32(txtClave.Text);
+                string incrip = incriptarMensaje(mensaje, clave);
 
-            EntidadUsuario nuevoU
-                = new EntidadUsuario()
-                {
-                    NombreUsr = txtUsr.Text,
-                    Contraseña = txtPaswr.Text,
-                    ContraseñaIncrip = incrip,
-                    idMarca = Convert.ToInt16(ddlMarca.SelectedValue),
-                    idPuesto = Convert.ToInt16(ddlPuesto.SelectedValue),
-                };
+                EntidadUsuario nuevoU
+                    = new EntidadUsuario()
+                    {
+                        NombreUsr = txtUsr.Text,
+                        Contraseña = txtPaswr.Text,
+                        ContraseñaIncrip = incrip,
+                        idMarca = Convert.ToInt16(ddlMarca.SelectedValue),
+                        idPuesto = Convert.ToInt16(ddlPuesto.SelectedValue),
+                    };
 
-            string cad = "";
-            logUsu.InsertarUsuario(nuevoU, ref cad);
-            txtClave.Text = cad;
+                string cad = "";
+                logicaFachada.InsertarUsuario(nuevoU, ref cad);
+                MessageBox.Show(cad);
+            }    
         }
 
         public string incriptarMensaje(string Mensaje, int key)

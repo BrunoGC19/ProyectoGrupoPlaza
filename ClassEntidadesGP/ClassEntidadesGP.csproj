@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntidadClasificador.cs" />
+    <Compile Include="EntidadComentario.cs" />
     <Compile Include="EntidadGrupo.cs" />
     <Compile Include="EntidadIngredientes.cs" />
     <Compile Include="EntidadMarca.cs" />

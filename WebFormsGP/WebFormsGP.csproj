@@ -81,6 +81,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin1.aspx" />
     <Content Include="Avisos.aspx" />
     <Content Include="Avisos2.aspx" />
     <Content Include="Avisos3.aspx" />
@@ -151,6 +152,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin1.aspx.cs">
+      <DependentUpon>Admin1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin1.aspx.designer.cs">
+      <DependentUpon>Admin1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Avisos.aspx.cs">
       <DependentUpon>Avisos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

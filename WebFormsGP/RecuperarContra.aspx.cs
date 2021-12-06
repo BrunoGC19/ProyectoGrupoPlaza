@@ -14,43 +14,46 @@ namespace WebFormsGP
 {
     public partial class RecuperarContra : System.Web.UI.Page
     {
-        LogicaNegocioUsuario logUsu = null;
+        LogicaFachada logicaFachada = new LogicaFachada();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-
-                logUsu = new LogicaNegocioUsuario(ConfigurationManager.ConnectionStrings["cnlocal1"].ConnectionString);
-
-                Session["logUsur"] = logUsu;
-            }
-            else
-            {
-           
-                logUsu = (LogicaNegocioUsuario)Session["logUsur"];
-            }
+            
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            string nombre = txtUsr.Text;
-            string mns = "";
-            EntidadUsuario user = new EntidadUsuario();
-            user = logUsu.informacionContraseña(ref mns,ref nombre);
-            txtPaswr.Text = user.ContraseñaIncrip;
+            if (string.IsNullOrEmpty(txtUsr.Text))
+            {
+                MessageBox.Show("Para buscar ingresa tu usuario");
+            }
+            else
+            {
+                string nombre = txtUsr.Text;
+                string mns = "";
+                EntidadUsuario user = new EntidadUsuario();
+                user = logicaFachada.informacionContraseña(ref mns, ref nombre);
+                txtPaswr.Text = user.ContraseñaIncrip;
+            }    
 
         }
 
         protected void btnDescomprimir_Click(object sender, EventArgs e)
         {
-            int key =Convert.ToInt32(txtClave.Text);
-            string mensaje = txtPaswr.Text;
-            string correo = txtCorreo.Text;
-            string asunto = "RECUPERACION DE CONTRASEÑA";
-            string pass = DescriptarMensaje(mensaje, key);
-            string msg = logUsu.EnviarCorreo(ref correo, ref asunto, ref pass);
+            if (string.IsNullOrEmpty(txtClave.Text) || string.IsNullOrEmpty(txtCorreo.Text))
+            {
+                MessageBox.Show("Verifica que esten todos los campos llenos");
+            }
+            else
+            {
+                int key = Convert.ToInt32(txtClave.Text);
+                string mensaje = txtPaswr.Text;
+                string correo = txtCorreo.Text;
+                string asunto = "RECUPERACION DE CONTRASEÑA";
+                string pass = DescriptarMensaje(mensaje, key);
+                string msg = logicaFachada.EnviarCorreo(ref correo, ref asunto, ref pass);
 
-            ScriptManager.RegisterClientScriptBlock(this, typeof(string), "MsgAlert", "alert('" + msg + "');window.location = 'RecuperarContra.aspx';", true);
+                ScriptManager.RegisterClientScriptBlock(this, typeof(string), "MsgAlert", "alert('" + msg + "');window.location = 'RecuperarContra.aspx';", true);
+            }
         }
         public string DescriptarMensaje(string Mensaje, int key)
         {

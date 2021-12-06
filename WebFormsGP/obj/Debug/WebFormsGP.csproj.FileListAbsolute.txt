@@ -203,3 +203,5 @@ C:\Users\IanSaid\Documents\DocDalila\ProyectoGrupoPlaza\WebFormsGP\obj\Debug\Web
 C:\Users\IanSaid\Documents\DocDalila\ProyectoGrupoPlaza\WebFormsGP\obj\Debug\WebFormsGP.dll
 C:\Users\IanSaid\Documents\DocDalila\ProyectoGrupoPlaza\WebFormsGP\obj\Debug\WebFormsGP.pdb
 C:\Users\IanSaid\Documents\DocDalila\ProyectoGrupoPlaza\WebFormsGP\bin\EASendMail.dll
+C:\Users\brein\Desktop\PROJ\ProyectoGrupoPlaza\WebFormsGP\bin\EASendMail.dll
+C:\Users\IanSaid\Desktop\ProyectoGrupoPlaza\WebFormsGP\bin\EASendMail.dll

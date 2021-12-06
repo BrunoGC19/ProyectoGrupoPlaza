@@ -34,7 +34,7 @@
             <li><a class="active" href="#inicio">Inicio</a></li>
             <li><a href="#nosotros">Nosotros</a></li>
             <li><a href="#recetarios">Recetarios</a></li>
-            <li><a href="#capacitacion">Capacitacion</a></li>
+            <li><a href="#comentarios">Comentarios</a></li>
             <li><a href="Registro.aspx">Registro</a></li>
             
         </ul>
@@ -148,34 +148,23 @@
 
 <!-- capacitacion section starts  -->
 
-<section class="capacitacion" id="capacitacion">
+<h1 class="heading">  <span> Comentarios</span>  </h1>
 
-<h1 class="heading">  <span> Capacitate</span>  </h1>
+<section class="form-login" id="comentarios">
 
-<div class="box-container">
-
-    <div class="box" data-aos="fade-right">
-        <img src="images/capacitacion1.png" alt="">
-        <h3>Colaborador de Nuevo Ingreso</h3>
-        <h2>Bienvenido</h2>
-        <a href="file:///C:/xampp/htdocs/LOGIN%20CAP%20NUE/index.html"><button class="btn">iniciar Sesion</button></a>
-    </div>
-
-    <div class="box" data-aos="fade-left">
-        <img src="images/capacitacion2.png" alt="">
-        <h3>Colaborador Activo</h3>
-        <h2>Bienvenido</h2>
-        <p>&nbsp;</p>
-        <a href="file:///C:/xampp/htdocs/LOGIN%20CAP%20EXIS/index.html"><button class="btn">iniciar Sesion</button></a>
-        
-        <br />
-        
-    </div>
-        
-    </div>
-
-
-</div>
+<center>
+      	<h5>Comentarios </h5>
+      <!--imagen de resetario -->
+      <img src="images/logo-img.png" width="100" height="100"/>
+      <br/>
+      <asp:TextBox ID="txtUsuario" runat="server" class="controls" name="usuario" placeholder="Usuario"></asp:TextBox>
+      <br/>
+      <asp:TextBox ID="txtCorreo" runat="server" class="controls" name="correo" placeholder="Correo Electronico"></asp:TextBox>
+      <br />
+      <asp:TextBox ID="txtMensaje" runat="server" class="controls" name="mensaje" placeholder="Escribe tu comentario"></asp:TextBox>
+      <br />
+      <asp:Button ID="btnEnviarMensaje" runat="server" Text="Enviar comentario" class="buttons" OnClick="btnEnviarMensaje_Click"></asp:Button>
+</center>
 
 </section>
 

@@ -18,8 +18,11 @@ namespace LogicaNegociosGP
         {
             operaciones = new AccesoSQL(cadconex);
         }
+        public LogicaNegocioClasi()
+        {
 
-        
+        }
+
     }
 
 }
